@@ -1,0 +1,84 @@
+<mat-sidenav-container fullscreen class="content"> 
+<footer class="footer mat-elevation-z4">
+    <mat-toolbar class="footer mat-elevation-z4">
+      <div class="nav-button-container">
+        <button mat-button routerLink="/home/portal"  routerLinkActive="active-menu-item">
+          <div class="toolbar-icon">
+            <mat-icon>eco</mat-icon>
+          </div>
+          <div class="toolbar-icon-text">
+            <span>Portal</span>
+          </div>
+        </button>
+
+        <button mat-button routerLink="/home/reports" routerLinkActive="active-menu-item">
+          <div class="toolbar-icon">
+            <mat-icon>bar_chart</mat-icon>
+          </div>
+          <div class="toolbar-icon-text">
+            <span>Reports</span>
+          </div>
+        </button>
+
+        <button mat-button routerLink="/home/support" routerLinkActive="active-menu-item">
+          <div class="toolbar-icon">
+            <mat-icon>support_agent</mat-icon>
+          </div>
+          <div class="toolbar-icon-text">
+            <span>Live Support</span>
+          </div>
+        </button>
+
+        <button  mat-button routerLink="/home/messages" routerLinkActive="active-menu-item">
+          <div class="toolbar-icon">
+            <mat-icon>messages</mat-icon>
+          </div>
+          <div class="toolbar-icon-text">
+            <span>messages</span>
+          </div>
+        </button>
+      </div>
+    </mat-toolbar>
+  </footer> 
+
+  <div class="header">
+    <app-header-mobile fxHide fxShow.lt-sm>
+    </app-header-mobile>
+  </div>
+
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+</mat-sidenav-container>     
+
+<div class="main">
+   <mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav role="navigation" mode="push">
+      <app-sidenav (sideNavClosed)="sidenav.close()"></app-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxLayout="column">
+      <div class="header">
+        <app-header-mobile fxHide fxShow.lt-sm (sidenavToggle)="sidenav.toggle()">
+        </app-header-mobile>
+      </div> 
+
+
+
+      <app-footer-mobile (sidenavToggle)="sidenav.toggle()"  fxHide fxShow.lt-sm>
+    </app-footer-mobile>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+<!-- </div> -->
+
+<div class="header">
+    <app-header-mobile fxHide fxShow.lt-sm>
+    </app-header-mobile>
+  </div>
+  <main class="container">
+  
+    <router-outlet></router-outlet>
+  </main>

@@ -1,0 +1,141 @@
+<div class="header">
+  <app-header-mobile-back   [title]="'Spraying Schedule'" fxHide fxShow.lt-sm>
+  </app-header-mobile-back>
+</div>
+
+<div class="container">
+  
+  <mat-card class="demo-inline-calendar-card">
+    <mat-calendar [(selected)]="selected"></mat-calendar>
+  </mat-card>
+  <div class="form-container">
+    <mat-stepper
+      class="example-stepper"
+      [orientation]="(stepperOrientation | async)!">
+      <mat-step [stepControl]="firstFormGroup" label="Spraying Task?">
+        <form [formGroup]="secondFormGroup">
+          <p>
+            <mat-form-field appearance="fill">
+              <mat-label>Did you Spray?</mat-label>
+              <mat-select>
+                <mat-option value="one">Yes</mat-option>
+                <mat-option value="two">No</mat-option>
+
+              </mat-select>
+            </mat-form-field>
+          </p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" label="Spraying Description">
+        <form [formGroup]="firstFormGroup">
+        <p>
+          <mat-form-field appearance="fill">
+            <mat-label>Which Plants are/did you Spray</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Spraying Start Date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Spraying End Date</mat-label>
+            <input matInput [matDatepicker]="picker2">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker2></mat-datepicker>
+          </mat-form-field>
+        </p>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup" label="Weather Conditions">
+        <form [formGroup]="secondFormGroup">
+          <p>
+            <mat-form-field appearance="fill">
+              <mat-label>Weather Conditions</mat-label>
+              <mat-select>
+                <mat-option value="one">Hot</mat-option>
+                <mat-option value="two">Mild</mat-option>
+                <mat-option value="two">Cold</mat-option>
+                <mat-option value="two">windy</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Finish</ng-template>
+        <p>You are now done.</p>
+        <button mat-raised-button color="primary">Add Schedule</button>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+    <!-- <p>
+      <mat-form-field appearance="fill">
+        <mat-label>What are you Planting</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker2></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Weather Conditions</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Outline form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p> -->
+
+  </div>
+
+</div>

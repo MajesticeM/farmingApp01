@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-elevation-z4" >
+
+  <div class="toolbar-icon" (click)="backClicked()">
+    <mat-icon *ngIf="showBackArrow"
+              alt="back arrow">
+              arrow_back
+    </mat-icon>
+    
+  </div>
+  <h3  class="headerTitle">{{title}}</h3>
+  <!-- <span class="fill-space"></span> -->
+
+  <div class="more-vert">
+    <mat-icon>more</mat-icon>
+  </div>
+
+</mat-toolbar>
+
+

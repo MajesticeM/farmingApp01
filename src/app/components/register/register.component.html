@@ -1,0 +1,564 @@
+<div class="container">
+   
+    <div class="form-arcodion">
+        <div class="logo-container"
+            [ngClass]="{'is-tablet-potrait-logo': isTabletPotrait, 'is-handset-potrait-logo': isHandsetPotrait,  'is-handset-landscape-logo': isHandsetLandscape}">
+            <img class="logo" src="../../../assets/images/P1.png" alt="SE holdings Logo image"
+                title="Client Logo" />
+        </div>
+        <h1 style="text-align: center;">Farmer Registration</h1>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Farmer Profile
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Type your name and age
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+
+                
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Name & Surname</mat-label>
+                        <input [(ngModel)]="NameSurname" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>ID Number</mat-label>
+                        <input [(ngModel)]="IDNumber" type="number" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+               
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Cell Number</mat-label>
+                        <input [(ngModel)]="cell" type="cel" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+               
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email Address</mat-label>
+                        <input [(ngModel)]="email" type="email" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Years of farming experience</mat-label>
+                        <input [(ngModel)]="YearsOfExperience" type="number" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Level of Education</mat-label>
+                        <mat-select [(ngModel)]="levelOfEducation" required>
+                            <mat-option value="NM">No Matric</mat-option>
+                            <mat-option value="M">Matric</mat-option>
+                            <mat-option value="HC">Higher Certificate</mat-option>
+                            <mat-option value="D">Diploma</mat-option>
+                            <mat-option value="BD">Bachelor’s Degree</mat-option>
+                            <mat-option value="HD">Honours Degree</mat-option>
+                            <mat-option value="MD">Master’s Degree</mat-option>
+                            <mat-option value="Doc">Doctorate</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+               
+              
+                
+            </mat-expansion-panel><br>
+
+            <mat-expansion-panel >
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Farmer information
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Farm Name</mat-label>
+                        <input [(ngModel)]="FarmName" matInput placeholder="Business name" required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Farm Type</mat-label>
+                        <mat-select [(ngModel)]="FarmType" required>
+                            <mat-option value="Dairy">Dairy</mat-option>
+                            <mat-option value="Poultry">Poultry</mat-option>
+                            <mat-option value="Flower">Flower</mat-option>
+                            <mat-option value="Hay">Hay</mat-option>
+                            <mat-option value="Coopererative">Coopererative</mat-option>
+                            <mat-option value="Organic">Organic</mat-option>
+                            <mat-option value="Commercial">Commercial</mat-option>
+                            <mat-option value="Subsitence">Subsitence</mat-option>
+                            <mat-option value="Arable">Arable</mat-option>
+                            <mat-option value="Fish">Fish</mat-option>
+                            <mat-option value="Vegetable">Vegetable</mat-option>
+                            <mat-option value="Livestock">Livestock</mat-option>
+                            <mat-option value="Other">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Registration Number</mat-label>
+                        <input [(ngModel)]="RegistrationNumber" matInput placeholder="Registration number" required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                      
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Business type</mat-label>
+                        <mat-select [(ngModel)]="BusinessType" required>
+                            <mat-option value="Sole trader">Sole Proprietorship</mat-option>
+                            <mat-option value="Cooperative">Cooperative</mat-option>
+                            <mat-option value="PtyLtd">Pty Ltd – Proprietary limited company</mat-option>
+                            <mat-option value="PublicCompany">Public Company</mat-option>
+                            <mat-option value="franchise">Franchise</mat-option>
+                           
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <h3>Local supplier</h3>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Name of Supplier</mat-label>
+                        <input [(ngModel)]="nameOfLocalSupplier" type="text" matInput placeholder="Insert supplier name" required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What service do they provide?</mat-label>
+                        <input [(ngModel)]="serviceLocalTheyProvide" type="text" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+             
+                <h3>Mechanism supplier</h3>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Name of Supplier</mat-label>
+                        <input [(ngModel)]="nameOfMechanismSupplier" type="text" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What service do they provide?</mat-label>
+                        <input [(ngModel)]="serviceMechanismTheyProvide" type="text" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+            </mat-expansion-panel>
+            <br>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Farm documents
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                
+                <label class="file-input-label" style="margin-top:20px">Certified Copy of Id of Directors</label><br>
+                <input [(ngModel)]="IdOfDirector" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn " style="background-color: #167183;color: white;">
+                    Upload
+                </button><br>
+                <br>
+                <label class="file-input-label">Copy of CIPC/FB Registration</label><br>
+                <input [(ngModel)]="CIPCRegistration" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn"  style="background-color: #167183;color: white;">
+                    Upload
+                </button><br><br>
+                <label class="file-input-label">Certified Copy of title deed</label><br>
+                <input [(ngModel)]="copyOfTitleDeed" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button><br><br>
+                <label class="file-input-label">Water rights</label><br>
+                <input [(ngModel)]="waterRights" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button><br><br>
+                <label class="file-input-label">PUC Farm Number</label><br>
+                <input [(ngModel)]="PUC" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button><br><br>
+                <label class="file-input-label" style="margin-top:20px">Other documents</label><br>
+                <input [(ngModel)]="otherDocs" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button><br>
+
+               
+            </mat-expansion-panel>
+            <br>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Farm Site Information
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <input [(ngModel)]="farmCountry" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Farm Province</mat-label>
+                        <input [(ngModel)]="farmProvince" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Farm’s municipality</mat-label>
+                        <input [(ngModel)]="farmMunicipality" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Farm physical address</mat-label>
+                        <input [(ngModel)]="farmAddress" matInput required>
+                    </mat-form-field>
+                </div>
+                
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last soil test</mat-label>
+                        <input [(ngModel)]="lastSoilTest" type="date" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last soil test service provider</mat-label>
+                        <input [(ngModel)]="lastSoilTestProvider" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last water test</mat-label>
+                        <input [(ngModel)]="lastWaterTest" type="date" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Last water test service provider</mat-label>
+                        <input [(ngModel)]="lastWaterTestProvider" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>List the top 3 crop/livestock you have produced in the last 3 years</mat-label>
+                        <label for=""></label>
+              <input [(ngModel)]="Yield01" matInput type="text">
+              <input [(ngModel)]="Yield02" matInput type="text">
+              <input [(ngModel)]="Yield03" matInput type="text">
+                    </mat-form-field>
+                </div>
+                <h3>Farm size</h3>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Total number of hectares</mat-label>
+                        <input [(ngModel)]="totalNumberOfHectares" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What have you planted currently?</mat-label>
+                        <input [(ngModel)]="currentPlant" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Available hectares to plant</mat-label>
+                        <input [(ngModel)]="availableHectares" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Access to farm</mat-label>
+                        <mat-select [(ngModel)]="accessToFarm" required>
+                            <mat-option value="NGO">Gravel road</mat-option>
+                            <mat-option value="PTY">Semi tar</mat-option>
+                            <mat-option value="PTY">Tar road</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>How many hectares did you plant? </mat-label>
+                        <input [(ngModel)]="hectaresPlanted" type="text" matInput >
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What has been your yield per hectare?</mat-label>
+                        <input [(ngModel)]="yieldPerHectare" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which seed did you use?</mat-label>
+                        <input [(ngModel)]="seedUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Is your seed certified</mat-label>
+                        <mat-select [(ngModel)]="seedCertified" required>
+                            <mat-option value="Yes">Yes</mat-option>
+                            <mat-option value="No">No</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which fertilizer did you use?</mat-label>
+                        <input [(ngModel)]="fertilizerUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which herbicide did you use?</mat-label>
+                        <input [(ngModel)]="herbicideUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which fungicide did you use?</mat-label>
+                        <input [(ngModel)]="fungicideUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which pesticide did you use? </mat-label>
+                        <input [(ngModel)]="pesticideUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+            
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which other agro-chemicals did you use?</mat-label>
+                        <input [(ngModel)]="agroChemicalsUsed" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                <!--<div class="parent">
+                   
+                        <legend>Farm Physical Address</legend>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Street Name</mat-label>
+                            <input matInput placeholder="Placeholder">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Suburb/Town</mat-label>
+                            <input matInput placeholder="Placeholder">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Area Code</mat-label>
+                            <input matInput placeholder="Placeholder">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Date of last soil test</mat-label>
+                        <mat-date-range-input [rangePicker]="picker">
+                          <input matStartDate placeholder="Start date">
+                          <input matEndDate placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                      </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Soil Test Provider</mat-label>
+                        <input matInput placeholder="Placeholder">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </div>-->
+                <!-- <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Municipality</mat-label>
+                        <input matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </div> -->
+            </mat-expansion-panel>
+            <br>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Farm Infrastructure
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What is your water source? </mat-label>
+                        <input [(ngModel)]="waterSource" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What is the estimated capacity of your water source? (kilolitres) </mat-label>
+                        <input [(ngModel)]="estimatedWaterCapacity" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>How sustainable is your water source? (security of water supply)</mat-label>
+                        <input [(ngModel)]="WaterSourceSustainability" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What permits or licences do you have to access the water?  </mat-label>
+                        <input [(ngModel)]="permitsOrLicenses" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What irrigation infrastructure do you have?  </mat-label>
+                        <input [(ngModel)]="typeOfIrrigation" matInput required>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        
+                    </mat-form-field>
+                </div>
+               
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which other agro-machinery do you have?</mat-label>
+                        <input [(ngModel)]="agroMachinery" matInput required>
+                      
+                    </mat-form-field>
+                   
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which functions are performed manually?</mat-label>
+                        <input [(ngModel)]="manualFunctions" matInput required>
+                    </mat-form-field>
+                </div>
+            </mat-expansion-panel>
+            <br>
+            <mat-expansion-panel >
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Financial compliance
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Do you have financial statements for past 3 years?</mat-label>
+                        <input [(ngModel)]="financialStatements" type="text" matInput required>
+                    </mat-form-field>
+                </div>
+                    <div class="parent">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Do you have the latest management accounts? </mat-label>
+                            <input [(ngModel)]="latestManagementAccount" matInput type="text" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="parent">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Do you have the latest tax clearance certificate?</mat-label>
+                            <input [(ngModel)]="taxClearanceCertificate" matInput type="text" required>
+                        </mat-form-field>
+                    </div>
+               
+            </mat-expansion-panel>
+
+            <br>
+            <mat-expansion-panel >
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Training and Development
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>What agri-training do you require?</mat-label>
+                        <mat-select [(ngModel)]="AgriTraining" required>
+                            <mat-option value="LPT">Land Preparation Training</mat-option>
+                            <mat-option value="CHT">Chemical Handling Training</mat-option>
+                            <mat-option value="FST">Food Safety Training</mat-option>
+                            <mat-option value="FRK">Financial Record Keeping</mat-option>
+                            <mat-option value="FAT">First Aid Training</mat-option>
+                            <mat-option value="THT">Tractor Handling Training</mat-option>
+                            <mat-option value="PPT">Plant Production Training</mat-option>
+                            <mat-option value="ARK">Administration Recordkeeping</mat-option>
+                            <mat-option value="LGT">Local Gap Training</mat-option>
+                            <mat-option value="IGT">International Gap Training</mat-option>
+                            <mat-option value="Other">Other</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+               
+            </mat-expansion-panel>
+        </mat-accordion>
+          <button type="button" style="background-color: #EAC498;color: white;" class="btn" (click)= "register()" mat-raised-button >Register</button>
+        <button class="btn login-btn" mat-raised-button (click)="onLogin()" color="secondary">Have an accont? Login</button>
+    </div>

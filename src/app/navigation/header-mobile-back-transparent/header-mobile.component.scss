@@ -1,0 +1,31 @@
+.toolbar-icon {
+  display: inline-flex; // Proper verticle alignment
+  color: grey;
+}
+.toolbar-icon-arrow {
+  display: inline-flex; // Proper verticle alignment
+  color: grey;
+  position: absolute;
+  right: 0;
+  margin-right: 0.7rem;
+}
+.fill-space {
+  flex: 1 1 auto; // Fill space between two icons
+}
+
+mat-toolbar{
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.headerTitle{
+  font-size: medium;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

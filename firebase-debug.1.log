@@ -1,0 +1,82 @@
+[debug] [2023-03-15T16:49:10.587Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T16:49:10.589Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-15T16:49:10.589Z] CLI Version:   11.24.1
+[debug] [2023-03-15T16:49:10.590Z] Platform:      win32
+[debug] [2023-03-15T16:49:10.590Z] Node Version:  v18.14.0
+[debug] [2023-03-15T16:49:10.591Z] Time:          Wed Mar 15 2023 18:49:10 GMT+0200 (South Africa Standard Time)
+[debug] [2023-03-15T16:49:10.591Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T16:49:10.654Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T16:49:10.655Z] > authorizing via signed-in user (ralephatathanyani@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Mashu\farmingApp
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-03-15T16:49:26.403Z] Using project from CLI flag: se-holdings-farming
+[debug] [2023-03-15T16:49:26.406Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/se-holdings-farming [none]
+[debug] [2023-03-15T16:49:27.004Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/se-holdings-farming 200
+[debug] [2023-03-15T16:49:27.005Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/se-holdings-farming {"projectId":"se-holdings-farming","projectNumber":"64953670891","displayName":"Project One","name":"projects/se-holdings-farming","resources":{"hostingSite":"se-holdings-farming","realtimeDatabaseInstance":"se-holdings-farming-default-rtdb","storageBucket":"se-holdings-farming.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_4ddc1647-6226-4996-a782-9bc21908c028"}
+[info] i  Using project se-holdings-farming (Project One) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-03-15T16:49:27.020Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-03-15T16:49:27.020Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/se-holdings-farming
+[debug] [2023-03-15T16:49:29.048Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firebasedatabase.googleapis.com 200
+[debug] [2023-03-15T16:49:29.049Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-03-15T16:49:29.051Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/se-holdings-farming/locations/-/instances/se-holdings-farming-default-rtdb [none]
+[debug] [2023-03-15T16:49:29.784Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/se-holdings-farming/locations/-/instances/se-holdings-farming-default-rtdb 200
+[debug] [2023-03-15T16:49:29.784Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/se-holdings-farming/locations/-/instances/se-holdings-farming-default-rtdb {"name":"projects/64953670891/locations/us-central1/instances/se-holdings-farming-default-rtdb","project":"projects/64953670891","databaseUrl":"https://se-holdings-farming-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-03-15T16:49:37.874Z] >>> [apiv2][query] GET https://se-holdings-farming-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2023-03-15T16:49:38.614Z] <<< [apiv2][status] GET https://se-holdings-farming-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-03-15T16:49:38.614Z] <<< [apiv2][body] GET https://se-holdings-farming-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for se-holdings-farming-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2023-03-15T16:49:38.620Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firestore.googleapis.com [none]
+[debug] [2023-03-15T16:49:38.621Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firestore.googleapis.com x-goog-quota-user=projects/se-holdings-farming
+[debug] [2023-03-15T16:49:40.507Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firestore.googleapis.com 200
+[debug] [2023-03-15T16:49:40.507Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/se-holdings-farming/services/firestore.googleapis.com [omitted]
+[debug] [2023-03-15T16:49:40.507Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/se-holdings-farming/databases/(default) [none]
+[debug] [2023-03-15T16:49:41.291Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/se-holdings-farming/databases/(default) 200
+[debug] [2023-03-15T16:49:41.292Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/se-holdings-farming/databases/(default) {"name":"projects/se-holdings-farming/databases/(default)","uid":"a703f793-e856-489d-9cfb-1f3e32766605","createTime":"2022-05-24T07:01:47.802948Z","updateTime":"2022-05-24T07:01:47.802948Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","appEngineIntegrationMode":"ENABLED","keyPrefix":"s","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"ILun+4qy3v0CMMbbhK6Ly/0C"}
+[debug] [2023-03-15T16:49:41.292Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-03-15T16:49:41.292Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T16:49:41.292Z] > authorizing via signed-in user (ralephatathanyani@gmail.com)
+[debug] [2023-03-15T16:49:41.292Z] [iam] checking project se-holdings-farming for permissions ["firebase.projects.get"]
+[debug] [2023-03-15T16:49:41.293Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/se-holdings-farming:testIamPermissions [none]
+[debug] [2023-03-15T16:49:41.293Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/se-holdings-farming:testIamPermissions x-goog-quota-user=projects/se-holdings-farming
+[debug] [2023-03-15T16:49:41.293Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/se-holdings-farming:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-03-15T16:49:42.991Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/se-holdings-farming:testIamPermissions 200
+[debug] [2023-03-15T16:49:42.991Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/se-holdings-farming:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 

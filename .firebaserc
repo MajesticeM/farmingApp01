@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "se-holdings-farming": {
+      "hosting": {
+        "projectone-43e87": [
+          "projectone-43e87"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "se-holdings-farming"
+  }
+}

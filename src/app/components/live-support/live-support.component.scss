@@ -1,0 +1,111 @@
+$purple-gradient: linear-gradient(45deg, rgba(87,29,146,1) 0%,rgba(172,25,102,1) 100%);
+$purple-gradient: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+$blue1-gradient: linear-gradient(to bottom right, #5E5AEC, #3F9EFC);
+$blue2-gradient: linear-gradient(to bottom right, #95b283, green);
+$shadow: 0 13px 26px rgba(#000, .2), 0 3px 6px rgba(#000, .2);
+
+.container {
+    background-color: white;
+    // height: 100%;
+    padding-top: 60px;
+}
+
+.contact-text {
+    color: black;
+}
+
+.organization-text {
+    color: grey;
+    font-size: x-small;
+}
+
+mat-icon {
+    color: grey;
+}
+
+mat-divider {
+    background-color: lightgrey;
+}
+
+.header {
+    color: gray;
+    font-size: medium;
+}
+
+.container {
+    align-items: center;
+    justify-items: center;
+}
+
+// .element {
+
+//     border-radius: 5px;
+//     display: flex;
+//     height: 8rem;
+//     width: 100%;
+//     // background-color: aqua;
+//     margin-top: 3rem;
+// }
+
+.card {
+    // background-color: red;
+    color: white;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 14rem;
+    // background-color: aqua;
+    margin-top: 1.5rem;
+    background-image: url(../../../assets/images/mic-support.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-image {
+    max-width: 100%;
+    max-height: 100%;
+    // margin-bottom: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0rem;
+}
+.button-container{
+    align-items: center;
+    align-content: center;
+}
+.btn {
+    color: #fff;
+    width: 60%;
+    height: 42px;
+    outline: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px;
+    box-shadow: 0 13px 26px rgba(#000, .16), 0 3px 6px rgba(#000, .16);
+    background: $blue2-gradient;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.live-chat-button{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+mat-card-content {
+    max-width: 400px;
+    text-align: center;
+    color: #3b3b3b;
+  }
+  .help-text{
+     padding: 0.5rem;
+     text-align: center;
+  }
+

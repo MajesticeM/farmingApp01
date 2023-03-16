@@ -1,0 +1,149 @@
+// .calendar-card {
+//   background-color: white;
+//   height: 80px;
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+// }
+
+.container {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  padding-top: 0rem;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  z-index: 99;
+  // position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.form-container {
+  border-radius: 5px;
+  width: 90%;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.mat-form-field {
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+.demo-inline-calendar-card {
+ margin-top: 0.5rem;
+}
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: black !important;
+   }
+
+   ::ng-deep .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: black !important;
+   } 
+
+   ::ng-deep .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;;
+   }
+
+   ::ng-deep mat-calendar .mat-form-field-label {
+    /*change color of label*/
+    color: black !important;
+   }
+
+
+   mat-datepicker-toggle {
+    color: black !important;
+   }
+
+   .mat-calendar-body {
+    font-size: 16px;
+    font-weight: bold;
+    color: black !important;
+    
+  }
+
+  //start of cycle
+  .temparature-container{
+    width: 90%;
+  }
+  .mat-stepper-vertical {
+    margin-top: 8px;
+  }
+
+  .mat-form-field {
+    margin-top: 16px;
+  }
+  ::ng-deep  .mat-calendar {
+    width: 70%!important;
+    // height: 10px!important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+
+  .mat-form-field {
+    margin-top: 16px;
+  }
+
+  //stepper
+  .example-stepper {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+  :host ::ng-deep .mat-card-header-text {
+    width: 100%;
+    text-align: right;
+  }
+  
+  .icon-lg {
+    font-size: 50px;
+  }
+  
+  .mat-card {
+    color: #fff;
+    .mat-card-header {
+      width: 100%;
+    }
+    .mat-card-title {
+      font-size: 25px !important;
+      text-align: center;
+    }
+    .mat-card-subtitle {
+      color: #fff;
+      white-space: nowrap;
+      text-align: center;
+    }
+    &.danger {
+      background: linear-gradient(60deg, #ec407a, #d81b60);
+    }
+    &.warn {
+      background: linear-gradient(60deg, #ffa726, #fb8c00);
+    }
+    &.success {
+      background: linear-gradient(60deg, #66bb6a, #43a047);
+    }
+    &.info {
+      background: linear-gradient(60deg, #26c6da, #00acc1);
+    }
+  }
+  

@@ -1,0 +1,324 @@
+
+<div class="container">
+   
+    <div class="form-arcodion">
+        <div class="logo-container"
+            [ngClass]="{'is-tablet-potrait-logo': isTabletPotrait, 'is-handset-potrait-logo': isHandsetPotrait,  'is-handset-landscape-logo': isHandsetLandscape}">
+            <img class="logo" src="../../../assets/images/P1.png" alt="SE holdings Logo image"
+                title="Client Logo" />
+        </div>
+        <h1 style="text-align: center;">General Business Registration</h1>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Business owner information
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Type your name and age
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Name & Surname</mat-label>
+                        <input type="text" [(ngModel)]="NameSurname" matInput >
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email address</mat-label>
+                        <input type="email" [(ngModel)]="email" matInput >
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Cell number</mat-label>
+                        <input type="text" [(ngModel)]="cell" matInput >
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>ID number</mat-label>
+                        <input type="text" [(ngModel)]="IDNumber" matInput>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                       
+                    </mat-form-field>
+                </div>
+               
+               
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Level of Education</mat-label>
+                        <mat-select [(ngModel)]="levelOfEducation">
+                            <mat-option value="NM">No Matric</mat-option>
+                            <mat-option value="M">Matric</mat-option>
+                            <mat-option value="HC">Higher Certificate</mat-option>
+                            <mat-option value="D">Diploma</mat-option>
+                            <mat-option value="BD">Bachelor’s Degree</mat-option>
+                            <mat-option value="HD">Honours Degree</mat-option>
+                            <mat-option value="MD">Master’s Degree</mat-option>
+                            <mat-option value="DOC">Doctorate</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                
+               
+            </mat-expansion-panel><br>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Business information
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Business Name</mat-label>
+                        <input type="text" matInput [(ngModel)]="businessName">
+                       
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Business Type</mat-label>
+                        <mat-select [(ngModel)]="businessType">
+                            <mat-option value="NGO">NGO</mat-option>
+                            <mat-option value="PTY">PTY</mat-option>
+                            <mat-option value="Co-operative">Co-operative</mat-option>
+                            <mat-option value="Goverment">Goverment Entity</mat-option>
+                            <mat-option value="Sole trader">Sole Proprietorship</mat-option>
+                            <mat-option value="Pty ltd">Pty Ltd – Proprietary limited company</mat-option>
+                            <mat-option value="PC">Public Company</mat-option>
+                            <mat-option value="Franchise">Franchise</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Registration Number</mat-label>
+                        <input type="text" [(ngModel)]="registrationNumber" matInput>
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                      
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Brief Description of your business</mat-label>
+                      <textarea [(ngModel)]="BriefDescription" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>List your manufactured products</mat-label>
+                      <textarea [(ngModel)]="manufacturedProducts" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>At what stage is your business?</mat-label>
+                        <mat-select [(ngModel)]="businessStage">
+                            <mat-option value="select stage">Select stage</mat-option>
+                            <mat-option value="concept stage">Concept stage</mat-option>
+                            <mat-option value="operational stage">Operational stage</mat-option>
+                            <mat-option value="fundraising stage">Fundraising stage</mat-option>
+                            <mat-option value="scale up stage">Scale up stage</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Have you accessed the market?</mat-label>
+                        <mat-select [(ngModel)]="marketAccess">
+                            <mat-option value="Yes">Yes</mat-option>
+                            <mat-option value="No">No</mat-option>
+                           
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Brief description of your current market and customers</mat-label>
+                      <textarea [(ngModel)]="currentMarketDescription" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Brief description of your desired market and customers</mat-label>
+                      <textarea [(ngModel)]="desiredMarketDesription" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+            </mat-expansion-panel>
+            <br>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Business Admin
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <fieldset class="supporting-doc-fieldSet">Supporting Documents</fieldset>
+                <label class="file-input-label">Certified Copy of Id of Directors</label><br>
+                <input [(ngModel)]="idOfDirectors" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button><br><br>
+                <label class="file-input-label">Copy of CIPC/FB Registration</label><br>
+                <input [(ngModel)]="cipc " type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
+                    Upload
+                </button>
+                
+                
+            </mat-expansion-panel>
+            <br>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Business Site Information
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Business address</mat-label>
+                      <textarea [(ngModel)]="businessAddress" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Municipality</mat-label>
+                        <input matInput type="text" [(ngModel)]="Municipality">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Province</mat-label>
+                        <mat-select [(ngModel)]="province">
+                            <mat-option value="Gauteng">Gauteng</mat-option>
+                            <mat-option value="Limpopo">Limpopo</mat-option>
+                            <mat-option value="Kwazulu-Natal">Kwazulu-Natal</mat-option>
+                            <mat-option value="Eastern Cape">Eastern Cape</mat-option>
+                            <mat-option value="Northern Cape">Northern Cape</mat-option>
+                            <mat-option value="Western Cape">Western Cape</mat-option>
+                            <mat-option value="Free State">Free State</mat-option>
+                            <mat-option value="North West">North West</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Output produced per week</mat-label>
+                      <textarea [(ngModel)]="outputproduced" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Describe your operation equipment</mat-label>
+                      <textarea [(ngModel)]="operationEquipment" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+               <!-- <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Describe your production input and who are your suppliers</mat-label>
+                      <textarea [(ngModel)]="" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>-->
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which specialised equipment do you have?</mat-label>
+                      <textarea [(ngModel)]="specialisedEquipment" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Which machines do you need?</mat-label>
+                      <textarea [(ngModel)]="neededMachines" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+              
+               
+            </mat-expansion-panel>
+            <br>
+
+          
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Financial compliance
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Do you have financial statements for past 3 years?</mat-label>
+                        
+                        <mat-select [(ngModel)]="financialStatements">
+                            <mat-option value="Yes">Yes</mat-option>
+                            <mat-option value="No">No</mat-option>
+                           
+                        </mat-select>
+                    </mat-form-field>
+                    </div>
+                    <div class="parent">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Do you have the latest management accounts? </mat-label>
+                            <mat-select [(ngModel)]="managementStatements">
+                                <mat-option value="Yes">Yes</mat-option>
+                                <mat-option value="No">No</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="parent">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Do you have the latest tax clearance certificate?</mat-label>
+                            <mat-select [(ngModel)]="taxClearance">
+                                <mat-option value="Yes">Yes</mat-option>
+                                <mat-option value="No">No</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                
+            </mat-expansion-panel>
+
+            <br>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class='my-expansion-panel-header'>
+                    <mat-panel-title>
+                        Training and Development
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div class="parent">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Describe what training/ development/ incubation support you’ve received?</mat-label>
+                      <textarea [(ngModel)]="trainingDevelopment" matInput name="" id="" cols="30" rows="10"></textarea>
+                    </mat-form-field>
+                </div>
+               
+            </mat-expansion-panel>
+        </mat-accordion>
+        <button type="button" style="background-color: #EAC498;color: white;" class="btn" (click)= "register()" mat-raised-button >Register</button>
+        <button class="btn login-btn" mat-raised-button (click)="onLogin()" color="secondary">Have an accont? Login</button>
+    </div>

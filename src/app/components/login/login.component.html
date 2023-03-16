@@ -1,0 +1,36 @@
+<div class="everything">
+    <div class="main-container">
+        <div class="form-container"
+            [ngClass]="{'is-tablet-potrait-form-container': isTabletPotrait, 'is-handset-potrait-form-container': isHandsetPotrait}">
+    
+            <div class="logo-container">
+                <div class="circle circle-portal logo ">
+                    <!-- <mat-icon class="circle-icon">forums</mat-icon> -->
+                    <!-- <h3>Portal</h3> -->
+                </div>
+            </div>
+            <span class="card-header" >Login
+            </span>
+            <form class="form" [formGroup]="form" [ngClass]="{'is-web-form': isWeb,'is-tablet-potrait-form': isTabletPotrait, 'is-handset-landscape-form': isHandsetLandscape,'is-handset-potrait-form': isHandsetPotrait}" (ngSubmit)="onSubmit('value')">
+                <label class="input-label"
+                    [ngClass]="{'is-tablet-potrait-lable': isTabletPotrait, 'is-handset-potrait-label': isHandsetPotrait}"
+                    for="fname">Email</label>
+                <input [(ngModel)]="email" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="email"
+                    id="email" name="email" placeholder="email">
+                <label class="input-label"  [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-label': isHandsetPotrait}"
+                    for="lname">Password</label>
+                <input [(ngModel)]="password" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="password"
+                    id="lname" name="lastname" placeholder="Password">
+                <span class="forgot-password-span"  [ngClass]="{'is-tablet-potrait-reset-span': isTabletPotrait, 'is-handset-potrait-reset-span': isHandsetPotrait}">Forgot Password? <span class="reset-password-span">Reset Password</span>
+                </span>
+                <button type="button" style="background-color: #167183;color: white;" class="btn " (click)= "onLogin()" mat-raised-button >Login</button>
+              <!--  <button type="button" style="background-color: #167183;color: white;" class="btn" (click)= "onLoginBusiness()" mat-raised-button >Login as business</button>
+                <button type="button" style="background-color: #167183;color: white;" class="btn" (click)= "onLoginManufacturer()" mat-raised-button >Login as manufacturer</button>-->
+                <span class="register-span"  [ngClass]="{'is-tablet-potrait-regist-span': isTabletPotrait, 'is-handset-potrait-regist-span': isHandsetPotrait}">Don't have an account? </span>
+                <button type="button" class="btn"  (click)= "registerAll()" mat-raised-button style="background-color: #EAC498;color: white;">Register</button>
+               
+            </form>
+    
+        </div>
+    </div>
+</div>
