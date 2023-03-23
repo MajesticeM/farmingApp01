@@ -79,6 +79,7 @@ export class RegisterComponent implements OnInit {
           }
         });
   }
+  parentOrganization!:any;
   NameSurname!:string;
   IDNumber!:string;
   cell!:number;
@@ -150,6 +151,7 @@ export class RegisterComponent implements OnInit {
     this.farm=
     {
       formType:"Farm",
+      parentOrganization:this.parentOrganization,
       farmerProfile:
       {
         NameSurname:this.NameSurname,
@@ -265,6 +267,7 @@ export class RegisterComponent implements OnInit {
     this.farm=
     {
       formType:"Farm",
+      parentOrganization:this.parentOrganization,
       farmerProfile:
       {
         NameSurname:this.NameSurname,

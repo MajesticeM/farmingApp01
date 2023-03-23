@@ -76,6 +76,7 @@ export class ManufacturerComponent implements OnInit {
         });
   }
 //Manufacturer Registration
+parentOrganization!:any;
 FirstName!:string;
 ID!:string;
 cell!:string;
@@ -120,6 +121,8 @@ addManufacturer()
   this.manufacturer=
   {
     formType:"manufacturer",
+    parentOrganization:this.parentOrganization,
+
     manufacturerRegistration:
     {
       FirstName:this.FirstName,
@@ -192,6 +195,7 @@ onFileSelected($event: any) {
     this.manufacturer=
     {
       formType:"manufacturer",
+      parentOrganization:this.parentOrganization,
       manufacturerRegistration:
       {
         FirstName:this.FirstName,

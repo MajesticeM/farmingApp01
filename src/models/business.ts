@@ -7,6 +7,8 @@ import { TrainingDevelopment } from "./training-development";
 export interface Business
 {
   formType:"Business",
+  parentOrganization:any,
+
    //Business owner information
    BusinessOwnerInformation:
    {

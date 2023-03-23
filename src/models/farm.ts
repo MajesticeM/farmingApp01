@@ -38,6 +38,7 @@ import { TrainingDevelopment } from "./training-development";
 export interface Farm
 {
     formType:"Farm",
+    parentOrganization:any,
     farmerProfile:
     {
         NameSurname:string,

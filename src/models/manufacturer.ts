@@ -9,6 +9,7 @@ import { TrainingDevelopment } from "./training-development";
 export interface Manufacturer
 {
 formType:"manufacturer",
+parentOrganization:any,
 //Manufacturer Registration
 manufacturerRegistration:
 {

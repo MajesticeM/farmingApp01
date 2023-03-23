@@ -77,6 +77,7 @@ export class GeneralRegisterComponent implements OnInit {
         });
   }
   //Business owner information
+  parentOrganization!:any;
   NameSurname!:string;
   IDNumber!:string;
   cell!:number;
@@ -121,6 +122,8 @@ export class GeneralRegisterComponent implements OnInit {
     this.business=
     {
       formType:"Business",
+      parentOrganization:this.parentOrganization,
+
       BusinessOwnerInformation:
       {
         NameSurname:this.NameSurname,
@@ -200,6 +203,7 @@ export class GeneralRegisterComponent implements OnInit {
     console.log("onRegister"); 
     this.business={
       formType:"Business",
+      parentOrganization:this.parentOrganization,
       BusinessOwnerInformation:
       {
         NameSurname:this.NameSurname,
