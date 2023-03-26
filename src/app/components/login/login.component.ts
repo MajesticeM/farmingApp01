@@ -84,12 +84,11 @@ export class LoginComponent implements OnInit {
   
   onLogin() {
     console.log("sdfsdf");
-    if (condition) 
-    {
+    
       this.authService.login(this.email,this.password).then(result =>{
         this.router.navigate(['/portal'])
       });
-    }
+    
   }
   onLoginBusiness()
   {
