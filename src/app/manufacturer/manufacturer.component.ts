@@ -6,6 +6,8 @@ import { Manufacturer } from 'src/models/manufacturer';
 import { error } from 'console';
 import { BusinessService } from 'src/services/generalBusiness.service';
 import { ManufacturerService } from 'src/services/manufacturer.service';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -32,6 +34,7 @@ export class ManufacturerComponent implements OnInit {
     
     private route: ActivatedRoute,
     private organization:ManufacturerService,
+    private httpClient: HttpClient,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -180,12 +183,20 @@ addManufacturer()
 }  
 
   
-onFileSelected($event: any) {
-    console.log("file chosen")
-  }
-  selectFile(event: any): void {
+uploadFile(file: File) {
+  const formData = new FormData();
+  formData.append('file', file);
 
-  }
+  this.httpClient.get('/api/data').subscribe({
+    next: (response) => console.log('Success:', response),
+    error: (error) => console.log('Error:', error),
+    complete: () => console.log('Request completed')
+  });
+}
+onFileSelected(event: any) {
+  const file: File = event.target.files[0];
+  this.uploadFile(file);
+}
 
   upload(): void {
 

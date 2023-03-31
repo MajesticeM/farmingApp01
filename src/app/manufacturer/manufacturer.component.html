@@ -172,12 +172,12 @@
                 </mat-expansion-panel-header>
                 <fieldset class="supporting-doc-fieldSet">Supporting Documents</fieldset>
                 <label class="file-input-label">Certified Copy of Id of Directors</label><br>
-                <input [(ngModel)]="IDofDirectors" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="IDofDirectors" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn btn-primary">
                     Upload
                 </button><br><br>
                 <label class="file-input-label">Copy of CIPC/FB Registration</label><br>
-                <input [(ngModel)]="cipc" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="cipc" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn btn-primary">
                     Upload
                 </button>

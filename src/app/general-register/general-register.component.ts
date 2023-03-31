@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BusinessService } from 'src/services/generalBusiness.service';
 import { Business } from 'src/models/business';
 import { error } from 'console';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-general-register',
@@ -33,6 +34,7 @@ export class GeneralRegisterComponent implements OnInit {
     
     private route: ActivatedRoute,
     private organization:BusinessService,
+    private httpClient: HttpClient,
     private router: Router) { }
 
 
@@ -182,13 +184,20 @@ export class GeneralRegisterComponent implements OnInit {
 
  
   
-  onFileSelected($event: any) {
-    console.log("file chosen")
+  uploadFile(file: File) {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    this.httpClient.get('/api/data').subscribe({
+      next: (response) => console.log('Success:', response),
+      error: (error) => console.log('Error:', error),
+      complete: () => console.log('Request completed')
+    });
   }
-  selectFile(event: any): void {
-
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    this.uploadFile(file);
   }
-
   upload(): void {
 
   }

@@ -186,33 +186,33 @@
                 </mat-expansion-panel-header>
                 
                 <label class="file-input-label" style="margin-top:20px">Certified Copy of Id of Directors</label><br>
-                <input [(ngModel)]="IdOfDirector" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="IdOfDirector" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn " style="background-color: #167183;color: white;">
                     Upload
                 </button><br>
                 <br>
                 <label class="file-input-label">Copy of CIPC/FB Registration</label><br>
-                <input [(ngModel)]="CIPCRegistration" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="CIPCRegistration" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn"  style="background-color: #167183;color: white;">
                     Upload
                 </button><br><br>
                 <label class="file-input-label">Certified Copy of title deed</label><br>
-                <input [(ngModel)]="copyOfTitleDeed" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="copyOfTitleDeed" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
                     Upload
                 </button><br><br>
                 <label class="file-input-label">Water rights</label><br>
-                <input [(ngModel)]="waterRights" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="waterRights" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
                     Upload
                 </button><br><br>
                 <label class="file-input-label">PUC Farm Number</label><br>
-                <input [(ngModel)]="PUC" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="PUC" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
                     Upload
                 </button><br><br>
                 <label class="file-input-label" style="margin-top:20px">Other documents</label><br>
-                <input [(ngModel)]="otherDocs" type="file" class="file-input" (change)="selectFile($event)" #fileUpload>
+                <input [(ngModel)]="otherDocs" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
                 <button (click)="upload()" class="btn" style="background-color: #167183;color: white;">
                     Upload
                 </button><br>

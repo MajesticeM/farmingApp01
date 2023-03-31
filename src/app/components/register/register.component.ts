@@ -7,6 +7,8 @@ import { Farm } from 'src/models/farm';
 import { error } from 'console';
 import * as firebase from 'firebase/compat';
 import 'firebase/compat/storage';
+import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -35,6 +37,7 @@ export class RegisterComponent implements OnInit {
   constructor(private responsive: BreakpointObserver,
     
     private route: ActivatedRoute,
+    private httpClient: HttpClient,
     private organization:FarmService,
     private router: Router) { }
 
@@ -243,10 +246,20 @@ export class RegisterComponent implements OnInit {
   /*onFileSelected($event: any) {
     console.log("file chosen")
   }*/
-  selectFile(event: any): void {
-
+  uploadFile(file: File) {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    this.httpClient.get('/api/data').subscribe({
+      next: (response) => console.log('Success:', response),
+      error: (error) => console.log('Error:', error),
+      complete: () => console.log('Request completed')
+    });
   }
-
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    this.uploadFile(file);
+  }
   upload(): void {
 
   }
