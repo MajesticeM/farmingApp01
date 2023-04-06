@@ -11,10 +11,9 @@
         </span>
         <form class="form" [formGroup]="form" [ngClass]="{'is-web-form': isWeb,'is-tablet-potrait-form': isTabletPotrait, 'is-handset-landscape-form': isHandsetLandscape,'is-handset-potrait-form': isHandsetPotrait}" (ngSubmit)="onSubmit('value')">
             
-            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)= "register()" mat-raised-button color="primary">Register Farmer</button>
-            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)= "registerGeneral()" mat-raised-button color="primary">Register General Business</button>
-            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)= "registerManufacturer
-            ()" mat-raised-button color="primary">Register Manufacturer</button>
+            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)="register()" mat-raised-button color="primary">Register Farmer</button>
+            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)="registerGeneral()" mat-raised-button color="primary">Register General Business</button>
+            <button type="button" style="background-color: #167183;color: white;" class="btn"  (click)="registerManufacturer()" mat-raised-button color="primary">Register Manufacturer</button>
             <button class="btn " style="background-color: #EAC498;color: white;" mat-raised-button (click)="onLogin()" color="secondary">Have an accont? Login</button>
         </form>
 

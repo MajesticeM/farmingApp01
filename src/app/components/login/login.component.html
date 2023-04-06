@@ -15,12 +15,12 @@
                 <label class="input-label"
                     [ngClass]="{'is-tablet-potrait-lable': isTabletPotrait, 'is-handset-potrait-label': isHandsetPotrait}"
                     for="fname">Email</label>
-                <input [(ngModel)]="email" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="email"
-                    id="email" name="email" placeholder="email">
+                <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="email"
+                    id="email" name="email" value="ralephatathanyani@gmail.com" placeholder="email">
                 <label class="input-label"  [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-label': isHandsetPotrait}"
                     for="lname">Password</label>
-                <input [(ngModel)]="password" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="password"
-                    id="lname" name="lastname" placeholder="Password">
+                <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" [ngClass]="{'is-All-Web': isWeb, 'is-handset-potrait-input': isHandsetPotrait}" type="password"
+                    id="lname" name="lastname" value="hello@123" placeholder="Password">
                 <span class="forgot-password-span"  [ngClass]="{'is-tablet-potrait-reset-span': isTabletPotrait, 'is-handset-potrait-reset-span': isHandsetPotrait}">Forgot Password? <span class="reset-password-span">Reset Password</span>
                 </span>
                 <button type="button" style="background-color: #167183;color: white;" class="btn " (click)= "onLogin()" mat-raised-button >Login</button>

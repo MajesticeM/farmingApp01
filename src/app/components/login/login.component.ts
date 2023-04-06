@@ -11,8 +11,7 @@ import { AuthService } from 'src/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  email!:string;
-  password!:string;
+ 
 
 
   form: any;
@@ -81,10 +80,13 @@ export class LoginComponent implements OnInit {
     console.log("sdfsdf")
     this.router.navigate(['/home']);
   }
-  
+  email!:string;
+  password!:string;
+
   onLogin() {
     console.log("sdfsdf");
-    
+    console.log(this.email);
+    console.log(this.password);
       this.authService.login(this.email,this.password).then(result =>{
         this.router.navigate(['/portal'])
       });

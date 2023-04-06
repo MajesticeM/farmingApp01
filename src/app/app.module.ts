@@ -17,8 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BottomNavModule } from 'ngx-bottom-nav';
-
-
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderMobileComponent } from './navigation/header-mobile/header-mobile.component';
 import { FooterMobileComponent } from './navigation/footer-mobile/footer-mobile.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
@@ -118,6 +117,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     MatCardModule,
     MatStepperModule,
     MatInputModule,
+    HttpClientModule,
     MatSelectModule,
     MatDatepickerModule,
     MatExpansionModule,

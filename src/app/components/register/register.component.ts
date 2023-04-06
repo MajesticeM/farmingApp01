@@ -261,7 +261,7 @@ export class RegisterComponent implements OnInit {
     this.uploadFile(file);
   }
   upload(): void {
-
+    console.log("File uploaded successfully");
   }
   /*async uploadFile(file: File) {
     const storageRef = firebase.storage().ref();
